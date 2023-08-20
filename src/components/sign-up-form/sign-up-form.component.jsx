@@ -4,6 +4,7 @@ import {
   createAuthUserWithEmailAndPassword,
   createUserDocumentFromAuth,
 } from "../../utils/firebase/firebase.utils";
+
 import FormInput from "../form-input/form-input.component";
 import Button from "../buttons/button.component";
 
@@ -57,7 +58,6 @@ function SignUpForm() {
         <FormInput
           label="Display Name"
           type="text"
-          id="displayName"
           name="displayName"
           value={displayName}
           onChange={handleChange}
@@ -66,7 +66,6 @@ function SignUpForm() {
         <FormInput
           label="Email"
           type="email"
-          id="email"
           name="email"
           value={email}
           onChange={handleChange}
@@ -75,7 +74,6 @@ function SignUpForm() {
         <FormInput
           label="Password"
           type="password"
-          id="password"
           name="password"
           value={password}
           onChange={handleChange}
@@ -84,7 +82,6 @@ function SignUpForm() {
         <FormInput
           label="Confirm Password"
           type="password"
-          id="confirmPassword"
           name="confirmPassword"
           value={confirmPassword}
           onChange={handleChange}

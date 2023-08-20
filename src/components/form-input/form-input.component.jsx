@@ -9,7 +9,6 @@ function FormInput({ label, ...otherProps }) {
           className={`${
             otherProps.value.length ? "shrink" : ""
           } form-input-label`}
-          htmlFor={otherProps.id}
         >
           {label}
         </label>
