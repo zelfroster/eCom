@@ -8,10 +8,10 @@ import "./product-card.styles.scss";
 
 function ProductCard({ product }) {
   const { name, price, imageUrl } = product;
-  const { addItemtoCart } = useContext(CartContext);
+  const { addItemToCart } = useContext(CartContext);
 
   function addProductToCart() {
-    addItemtoCart(product);
+    addItemToCart(product);
   }
 
   return (
