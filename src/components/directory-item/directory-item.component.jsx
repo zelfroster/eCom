@@ -4,6 +4,8 @@ import {
   BackgroundImage,
   DirectoryItemBody,
 } from "./directory-item.styles";
+import { StyleSheetManager } from "styled-components";
+import isValidProp from "@emotion/is-prop-valid";
 
 function DirectoryItem({ category }) {
   const { imageUrl, title, route } = category;
@@ -14,7 +16,9 @@ function DirectoryItem({ category }) {
   }
   return (
     <DirectoryItemContainer onClick={onNavigateHandler}>
-      <BackgroundImage imageUrl={imageUrl} />
+      <StyleSheetManager shouldForwardProp={isValidProp}>
+        <BackgroundImage imageUrl={imageUrl} />
+      </StyleSheetManager>
       <DirectoryItemBody>
         <h2>{title}</h2>
         <p>Shop Now</p>
