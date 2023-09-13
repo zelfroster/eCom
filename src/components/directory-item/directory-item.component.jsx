@@ -1,11 +1,12 @@
 import { useNavigate } from "react-router-dom";
+import { StyleSheetManager } from "styled-components";
+import isValidProp from "@emotion/is-prop-valid";
+
 import {
   DirectoryItemContainer,
   BackgroundImage,
   DirectoryItemBody,
 } from "./directory-item.styles";
-import { StyleSheetManager } from "styled-components";
-import isValidProp from "@emotion/is-prop-valid";
 
 function DirectoryItem({ category }) {
   const { imageUrl, title, route } = category;
